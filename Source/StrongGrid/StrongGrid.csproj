@@ -1,12 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <TargetFramework>.net6.0</TargetFramework>
     <LangVersion>preview</LangVersion>
     <PlatformTarget>anycpu</PlatformTarget>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <OutputType>Library</OutputType>
-    <Version>$(SemVer)</Version>
     <DebugType>portable</DebugType>
   </PropertyGroup>
 
@@ -23,7 +22,6 @@
     <AssemblyName>Stenn.StrongGrid</AssemblyName>
     <AssemblyTitle>Stenn.StrongGrid</AssemblyTitle>
     <Authors>Jeremie Desautels</Authors>
-    <Company></Company>
     <Description>StrongGrid is a strongly typed .NET client for SendGrid's v3 API.</Description>
     <Copyright>Copyright © Jeremie Desautels and contributors 2016 - Present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -32,7 +30,6 @@
     <PackageIcon>PackageIcon.png</PackageIcon>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>StrongGrid SendGrid email</PackageTags>
-    <PackageReleaseNotes></PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,23 +42,6 @@
     <PackageReference Include="System.Text.Json" Version="7.0.2" />
   </ItemGroup>
 
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" !$(TargetFramework.StartsWith('net4')) ">
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-  </ItemGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' == 'Release' ">
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-  </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\PackageIcon.png" Pack="true" PackagePath="" />
