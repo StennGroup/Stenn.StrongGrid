@@ -167,6 +167,10 @@ AutoTest.Net/
 # Web workbench (sass)
 .sass-cache/
 
+# IDE cache/options directory
+.vs/
+.idea/
+
 # Installshield output folder
 [Ee]xpress/
 

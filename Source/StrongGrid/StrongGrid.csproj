@@ -19,9 +19,9 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>StrongGrid</PackageId>
-    <AssemblyName>StrongGrid</AssemblyName>
-    <AssemblyTitle>StrongGrid</AssemblyTitle>
+    <PackageId>Stenn.StrongGrid</PackageId>
+    <AssemblyName>Stenn.StrongGrid</AssemblyName>
+    <AssemblyTitle>Stenn.StrongGrid</AssemblyTitle>
     <Authors>Jeremie Desautels</Authors>
     <Company></Company>
     <Description>StrongGrid is a strongly typed .NET client for SendGrid's v3 API.</Description>
@@ -36,7 +36,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HttpMultipartParser" Version="8.3.0" />
+    <PackageReference Include="HttpMultipartParser" Version="8.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <PackageReference Include="MimeKitLite" Version="4.3.0" />
@@ -58,7 +58,7 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
-  
+
   <PropertyGroup Condition="'$(Configuration)' == 'Release' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
