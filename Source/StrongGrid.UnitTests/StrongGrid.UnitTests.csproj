@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net48;net6.0;net7.0</TargetFrameworks>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>StrongGrid.UnitTests</AssemblyName>
     <RootNamespace>StrongGrid.UnitTests</RootNamespace>
   </PropertyGroup>
@@ -36,7 +36,7 @@
     <DebugType>portable</DebugType>
     <Optimize>true</Optimize>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\StrongGrid\StrongGrid.csproj" />
   </ItemGroup>
@@ -52,5 +52,5 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  
+
 </Project>
