@@ -1,11 +1,11 @@
 trigger:
   paths:
     include:
-      - 'src/Stenn.CommunicationTools.Contracts'
+      - 'Source/StrongGrid'
   branches:
     include:
       - refs/heads/feature/*
-      - env/clientsrc
+      - refs/heads/main
 
 pr: none
 
@@ -22,6 +22,6 @@ extends:
   parameters:
     Directories:
     - dir:
-      Directory: '$(Build.SourcesDirectory)/src/Stenn.CommunicationTools.Contracts'
-      PackageName: 'Stenn.CommunicationTools.Contracts'
-      ProjectFile: 'Stenn.CommunicationTools.Contracts.csproj'
+      Directory: '$(Build.SourcesDirectory)/Source/StrongGrid'
+      PackageName: 'Stenn.StrongGrid'
+      ProjectFile: 'StrongGrid.csproj'
